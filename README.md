@@ -1,6 +1,6 @@
 # Soil Moisture Prediction Model
 
-Welcome to the **Soil Moisture Prediction** project by **Team Defiance**. This project leverages a hybrid machine learning approach to predict soil moisture levels accurately using time series data.
+Welcome to the **Soil Moisture Prediction** project by **Ayush Suryavanshi**. This project leverages a hybrid machine learning approach to predict soil moisture levels accurately using time series data.
 
 ## Deployment
 
