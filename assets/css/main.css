@@ -42,7 +42,8 @@
      box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
      cursor: pointer;
      margin: 6px;
-     background-color: white;
+     background-color: black;
+     align-items: center;
  }
  
  .btn:hover {
@@ -138,6 +139,5 @@
      width: 15px;
      height: 15px;
  }
-
 
  

@@ -36,7 +36,7 @@ def predict_s1():
 def predict_s2():
   input_values1 = [float(y) for y in request.form.values()]
   inp_features1 = [input_values1]
-  prediction1 = model4.predict(inp_features)
+  prediction1 = model4.predict(inp_features1)
   return render_template('index2.html',output='Predicted soil moisture is :{}'.format(prediction1))
 
 
