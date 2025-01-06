@@ -6,8 +6,8 @@ import warnings
 warnings.filterwarnings('ignore')
 
 app = Flask(__name__)
-model3 = pickle.load(open('model3.pkl', 'rb'))
-model4 = pickle.load(open('model4.pkl', 'rb'))
+model3 = 'model3.pkl'
+model4 = 'model4.pkl'
 
 @app.route('/', methods=['GET'])
 def index():

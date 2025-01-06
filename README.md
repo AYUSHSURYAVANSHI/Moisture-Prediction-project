@@ -1,24 +1,53 @@
-a machine-learning model that can predict soil moisture levels based on time series data.
+# Soil Moisture Prediction Model
 
-A detailed Report can be found <a href = 'https://docs.google.com/document/d/1A7p_0JeeiBUQQXa80Rd8c4A7a6hutTEJWeLkbi-Mq4o/edit?usp=sharing'> here </a>
+Welcome to the **Soil Moisture Prediction** project by **Team Defiance**. This project leverages a hybrid machine learning approach to predict soil moisture levels accurately using time series data.
 
-The replit Deployment can be accessed <a href = "https://soil-moisture-pred-nith-2.sarthaksharma27.repl.co/"> here </a>
+## Deployment
 
-The live demo is available <a href = "https://youtu.be/dO_RXfn3ZRI"> here </a>
+- **Detailed Report**: [View Report](https://docs.google.com/document/d/1lO0DX5hBEHyaye1iGuFdh5X1E15zbmJ4PUPtuV-gsr4/edit?tab=t.0)
+- **Replit Deployment**: [Access Here](https://soil-moisture-pred-nith-2.sarthaksharma27.repl.co/)
 
+---
 
-WE are team defiance and we created an hybrid machine learning model to predict the soil moisture levels of any particular location. Our primary approach for preprocessing data was to find out the parameters for SARIMAX model to get the seasonality in data. for the same - We melted the soil moisture levels while taking the pm3 variable and it's values. to improve the model's predictive performance we also calculated the first, second and third difference of the moisture levels and used them for a comparative study.
+## Methodology
 
-we then decomposed the time series into 3 components and we applied the Loess decomposition using the STL class from the statsmodels package, specifically on a subset of the data spanning 8 months. The data was then checked for stationarity - if it's stationary or not. and the auto correlation and partial auto correlation values were plotted. 
+### Data Preprocessing
+1. **Parameter Selection for SARIMAX**:
+   - Melted soil moisture levels using the `pm3` variable and its values.
+   - Calculated the first, second, and third differences of the moisture levels for comparative analysis.
 
-Once the SARIMAX model was taken care of, TO predict the values of soil moisture - we deployed an imputed RFR Pipeline. The model was then exported and sliced using pickle slicer into 4 smaller divisions- each of which had a different weight, and size.
+2. **Seasonal Decomposition**:
+   - Decomposed the time series into three components using LOESS decomposition (`STL` class from `statsmodels`) over an 8-month subset.
 
-an even more accurate determination was made by using the ADFuller (ADF) test and the model was evaluated after fitting the values in it. The models were tested upon various values of P, Q, D, and M for getting the optimal values and accuracy.
+3. **Stationarity Check**:
+   - Verified stationarity using the Augmented Dickey-Fuller (ADF) test.
+   - Plotted autocorrelation and partial autocorrelation values to determine optimal parameters.
 
-## Further work is being done on it so that the user is allowed to pick the parameters to use while predicting and all other parameters for the model on his own. 
+### Model Development
+1. **SARIMAX Model**:
+   - Utilized SARIMAX for capturing seasonality and trend patterns in the data.
 
-Team - Defiance
-Team Members - 
-1. Sarthak Sharma(Leader)
-2. Divyansh Kumar
-3. Naman Nagvanshi
+2. **Random Forest Regression (RFR) Pipeline**:
+   - Built an imputed RFR pipeline for predicting soil moisture levels.
+   - Exported and sliced the model using `pickle slicer` into four smaller divisions, each with unique weights and sizes.
+
+### Optimization
+- Fine-tuned `P`, `Q`, `D`, and `M` parameters to maximize accuracy.
+- Evaluated model performance using ADFuller and other statistical tests.
+
+---
+
+## Future Work
+- Enable users to customize model parameters for prediction.
+- Provide a more interactive and user-friendly interface for real-time soil moisture predictions.
+
+---
+
+## Technologies Used
+- **Languages**: Python
+- **Libraries**: `statsmodels`, `pickle`, `scikit-learn`
+- **Deployment**: Replit
+
+---
+
+For any inquiries or contributions, feel free to contact **Team Defiance**.
